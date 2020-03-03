@@ -2,7 +2,7 @@
 
 Interoperable Stablecoin Standard
 
-## What is Creditcoin?
+## What is Gluwacoin?
 ---------------------
 
 Gluwacoin is an interoperable stablecoin standard. The standard has built-in interoperability, which connects its ecosystem to other blockchains. We have implemented the system to support the standard on the Ethereum network. The implementation includes security features, compliance features, and upgrade features that provide the desired level of security and elasticity.
