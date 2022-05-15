@@ -1,17 +1,23 @@
 # Gluwacoin
 
-Interoperable Stablecoin Standard
+Interoperable Token Standard
 
 ## What is Gluwacoin?
----------------------
 
-Gluwacoin is an interoperable stablecoin standard. The standard has built-in functions to enable exchange with other cryptocurrencies, which connects its ecosystem to other blockchains. We have implemented the system to support the ERC20 standard on the Ethereum network. The implementation includes security features, compliance features, and upgrade features that provide the desired level of security and elasticity.
+Gluwacoin is a cryptographic token standard.
+It extends the ERC20 standard for tokens and adds functions for cross-blockchain exchanges.
+The issuer can create Gluwacoin by different types of minting mechanisms such as wrapping, locking, or pegging
+and by pegging it to a different underlying asset.
+For example, you can wrap USD Coin into a Gluwacoin.
+Further, Gluwacoin supports its users to pay network fees in the token, not the cryptocurrency of the network.
 
-The Gluwacoin Trust proposed the standard. This repository is the official implementation of the Gluwacoin standard by Gluwa.
+Originally proposed by the Gluwacoin Trust as a stablecoin standard,
+Gluwa, Inc. currently maintains Gluwacoin as a general token standard focusing on interoperability.
 
-For more information, see https://gluwacoin.com, or read the [original whitepaper](https://gluwacoin.com/white-paper).
+For more information, see [Standard](/Standard.md).
 
-## Copyright
-------------
+### Code Examples
 
-Copyright (c) 2020 Gluwacoin LLC. All Rights Reserved
+Gluwa currently maintain 3 main type of Gluwacoin contracts:
+* [Wrapped Gluwacoin](https://github.com/gluwa/ERC-20-Wrapper-Gluwacoin): Gluwacoin wrapping another ERC-20 Token
+* [Controlled Gluwacoin](https://github.com/gluwa/Controlled-Gluwacoin): Gluwacoin with a circulation supply controller
