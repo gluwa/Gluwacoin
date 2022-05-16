@@ -295,7 +295,8 @@ Gluwa provides standard implementations of Gluwacoin.
 You can implement it differently to have different trade-offs: from gas saving to improved security.
 
 #### Example implementations are available at
-- https://github.com/Gluwa/Gluwacoin
+- Wrapped Gluwacoin implementation from Gluwa, Inc.: https://github.com/gluwa/ERC-20-Wrapper-Gluwacoin
+- Controlled Gluwacoin implementation from Gluwa, Inc.: https://github.com/gluwa/Controlled-Gluwacoin
 
 
 ## History
@@ -306,10 +307,6 @@ Historical links related to this standard:
 - Orginial proposal from Vitalik Buterin: https://github.com/ethereum/wiki/wiki/Standardized_Contract_APIs/499c882f3ec123537fc2fccd57eaa29e6032fe4a
 - Reddit discussion: https://www.reddit.com/r/ethereum/comments/3n8fkn/lets_talk_about_the_coin_standard/
 - Original Issue #20: https://github.com/ethereum/EIPs/issues/20
-
-### Gluwacoin Standard
-- Original implementation from Gluwa, Inc.: https://github.com/Gluwa/Gluwacoin
-
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
