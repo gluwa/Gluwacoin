@@ -4,9 +4,9 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "../interfaces/IGluwacoinEthlessV1.sol";
+import "../IGluwacoinV1.sol";
 
-import "./Validate.sol";
+import "../utils/Validate.sol";
 
 /**
  * @dev Extension of {ERC20} that allows users to burn an amount of token to reduce total token supply or to retrieve collaterized asset
@@ -15,7 +15,7 @@ import "./Validate.sol";
 abstract contract ERC20Burnable is
     Initializable,
     ERC20Upgradeable,
-    IGluwacoinEthlessV1
+    IGluwacoinV1
 {
     event Burnt(address indexed burnFrom, uint256 _value);
 

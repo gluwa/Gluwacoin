@@ -3,9 +3,9 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "../interfaces/IGluwacoinEthlessV1.sol";
+import "../IGluwacoinV1.sol";
 
-import "./Validate.sol";
+import "../utils/Validate.sol";
 
 /**
  * @dev Extension of {ERC20} that allows users to escrow a transfer. When the fund is reserved, the sender designates
@@ -13,7 +13,7 @@ import "./Validate.sol";
  * a `fee`. If the `reserve` gets expired without getting executed, the `sender` or the `executor` can `reclaim`
  * the fund back to the `sender`.
  */
-abstract contract ERC20Reservable is Initializable, ERC20Upgradeable, IGluwacoinEthlessV1 {
+abstract contract ERC20Reservable is Initializable, ERC20Upgradeable, IGluwacoinV1 {
         
     enum ReservationStatus {
         Draft,
