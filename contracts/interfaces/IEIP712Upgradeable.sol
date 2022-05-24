@@ -6,7 +6,16 @@ pragma solidity ^0.8.0;
  * @dev Interface of the ERC20 standard as defined in the EIP712.
  */
 interface IEIP712Upgradeable {
+
+    /**
+     * @notice Returns the domain data which is used by EIP712 signature
+     */
     function domainSeparator() external view returns (bytes32);
+
+    /**
+     * @notice Returns the contract version which is used by EIP712 signature
+     */
+    function version() external view returns (string memory);
 
     /**
      * @notice Returns the current chainid of the network.

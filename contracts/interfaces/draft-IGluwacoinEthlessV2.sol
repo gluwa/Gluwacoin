@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 /**
- * @dev Interface of the ERC20 standard as defined in the EIP.
+ * @dev The proposed interface of Standard Gluwacoin V2 that extend the existing functions of ERC-20. It is fully compatible to V1
  */
 interface IGluwacoinEthlessV2 {
     enum SigDomain {

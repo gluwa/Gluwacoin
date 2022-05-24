@@ -2,6 +2,11 @@
 
 pragma solidity ^0.8.0;
 
+
+/**
+ * @dev Extension of {ERC20} that allows the token can be used for staking and voting
+ *
+ */
 interface IStakedVotesUpgradeable {
     /**
      * @dev Emitted when an account changes their delegate.
