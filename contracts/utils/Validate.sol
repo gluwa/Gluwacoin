@@ -6,13 +6,17 @@ import "@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.
 /**
  * @dev Signature verification
  */
-library Validate {    
+library Validate {
     using ECDSAUpgradeable for bytes32;
 
     /**
      * @dev Throws if given `sig` is an incorrect signature of the `sender`.
      */
-    function validateSignature(bytes32 hash, address sender, bytes memory sig) internal pure {
+    function validateSignature(
+        bytes32 hash,
+        address sender,
+        bytes memory sig
+    ) internal pure {
         bytes32 messageHash = hash.toEthSignedMessageHash();
 
         address signer = messageHash.recover(sig);

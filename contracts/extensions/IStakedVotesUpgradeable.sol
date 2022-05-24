@@ -2,7 +2,6 @@
 
 pragma solidity ^0.8.0;
 
-
 /**
  * @dev Extension of {ERC20} that allows the token can be used for staking and voting
  *
@@ -100,7 +99,7 @@ interface IStakedVotesUpgradeable {
     /**
      * @dev Returns the current total staked tokens made by all users.
      * It is but NOT the sum of all the delegated votes!
-    */
+     */
     function getTotalStaked() external view returns (uint256);
 
     /**

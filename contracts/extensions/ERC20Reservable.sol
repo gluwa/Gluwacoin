@@ -13,8 +13,11 @@ import "../utils/Validate.sol";
  * a `fee`. If the `reserve` gets expired without getting executed, the `sender` or the `executor` can `reclaim`
  * the fund back to the `sender`.
  */
-abstract contract ERC20Reservable is Initializable, ERC20Upgradeable, IGluwacoinV1 {
-        
+abstract contract ERC20Reservable is
+    Initializable,
+    ERC20Upgradeable,
+    IGluwacoinV1
+{
     enum ReservationStatus {
         Draft,
         Active,
@@ -172,8 +175,8 @@ abstract contract ERC20Reservable is Initializable, ERC20Upgradeable, IGluwacoin
 
     /// @notice Execute a reserved record before expired block
     /// @dev transaction caller must be the executor or the reserve's owner (sender)
-    /// @param sender The token owner address whose token is reserved    
-    /// @param nonce The unique number to retrieve reserved data for each address   
+    /// @param sender The token owner address whose token is reserved
+    /// @param nonce The unique number to retrieve reserved data for each address
     /// @return success indicate the outcome of the execute funciton
     function execute(address sender, uint256 nonce)
         external
@@ -215,8 +218,8 @@ abstract contract ERC20Reservable is Initializable, ERC20Upgradeable, IGluwacoin
 
     /// @notice Reclaim a reserved record on or after expired block
     /// @dev transaction caller must be the executor or the reserve's owner (sender)
-    /// @param sender The token owner address whose token is reserved    
-    /// @param nonce The unique number to retrieve reserved data for each address   
+    /// @param sender The token owner address whose token is reserved
+    /// @param nonce The unique number to retrieve reserved data for each address
     /// @return success indicate the outcome of the reclaim funciton
     function reclaim(address sender, uint256 nonce)
         external

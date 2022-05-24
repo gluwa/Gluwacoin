@@ -7,7 +7,7 @@ import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgrad
 /**
  * @dev A utility to prevent specific group of users performing a specific action.
  * It is useful for the case when there are violations/malicious activities made by the account
-*/
+ */
 abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
     mapping(address => bool) private _blacklisted;
 
@@ -57,7 +57,7 @@ abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
      *
      * @param account The address to be blacklisted
      */
-    function blacklist(address account) virtual external;
+    function blacklist(address account) external virtual;
 
     /**
      * @notice Removes account from blacklist
@@ -66,7 +66,7 @@ abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
      *
      * @param account The address to remove from the blacklist
      */
-    function unBlacklist(address account) virtual external;
+    function unBlacklist(address account) external virtual;
 
     /**
      * @notice Adds blacklisting right to an account
@@ -75,7 +75,7 @@ abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
      *
      * @param newBlacklister The address to have the blacklist right
      */
-    function addBlacklister(address newBlacklister) virtual external;
+    function addBlacklister(address newBlacklister) external virtual;
 
     /**
      * @notice Removes blacklisting right from an account
@@ -84,5 +84,5 @@ abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
      *
      * @param existingBlacklister The address to remove from the blacklist
      */
-    function removeBlacklister(address existingBlacklister) virtual external;
+    function removeBlacklister(address existingBlacklister) external virtual;
 }

@@ -7,7 +7,6 @@ pragma solidity ^0.8.0;
  * It will be used together with ERC-20 standard for implementation
  */
 interface IGluwacoinV1 {
-
     enum SigDomain {
         /*0*/
         Nothing,
@@ -62,7 +61,7 @@ interface IGluwacoinV1 {
      * @param deadline must be a timestamp in the future.
      * @param v of a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments
      * @param r of a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments
-     * @param s of a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments  
+     * @param s of a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments
      */
     function permit(
         address owner,

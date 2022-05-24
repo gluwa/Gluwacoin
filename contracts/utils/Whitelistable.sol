@@ -4,11 +4,10 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
 
-
 /**
  * @dev A utility to allow specific group of users perform a specific action.
  * It is useful for the case users need to pass AML/KYC process to purchase/trade token
-*/
+ */
 abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
     mapping(address => bool) private _whitelisted;
 
@@ -58,7 +57,7 @@ abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
      *
      * @param account The address to be whitelisted
      */
-    function whitelist(address account) virtual external;
+    function whitelist(address account) external virtual;
 
     /**
      * @notice Removes account from whitelist
@@ -67,7 +66,7 @@ abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
      *
      * @param account The address to remove from the whitelist
      */
-    function unWhitelist(address account) virtual external;
+    function unWhitelist(address account) external virtual;
 
     /**
      * @notice Adds whitelisting right to an account
@@ -76,7 +75,7 @@ abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
      *
      * @param newWhitelister The address to have the whitelist right
      */
-    function addWhitelister(address newWhitelister) virtual external;
+    function addWhitelister(address newWhitelister) external virtual;
 
     /**
      * @notice Removes whitelisting right from an account
@@ -85,5 +84,5 @@ abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
      *
      * @param existingWhitelister The address to remove from the whitelist
      */
-    function removeWhitelister(address existingWhitelister) virtual external;
+    function removeWhitelister(address existingWhitelister) external virtual;
 }
