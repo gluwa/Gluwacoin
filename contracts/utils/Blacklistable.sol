@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
 
 abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
-    mapping(address => bool) private blacklisted;
+    mapping(address => bool) private _blacklisted;
 
     bytes32 public constant BLACKLISTER_ROLE = keccak256("BLACKLISTER");
 
@@ -31,7 +31,7 @@ abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
      */
     modifier notBlacklisted(address _account) {
         require(
-            !blacklisted[_account],
+            !_blacklisted[_account],
             "Blacklistable: account is blacklisted"
         );
         _;
@@ -43,7 +43,7 @@ abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
      * @param _account The address to check
      */
     function isBlacklisted(address _account) external view returns (bool) {
-        return blacklisted[_account];
+        return _blacklisted[_account];
     }
 
     /**

@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
 
 abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
-    mapping(address => bool) private whitelisted;
+    mapping(address => bool) private _whitelisted;
 
     bytes32 public constant WHITELISTER_ROLE = keccak256("WHITELISTER");
 
@@ -31,7 +31,7 @@ abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
      */
     modifier notWhitelisted(address _account) {
         require(
-            !whitelisted[_account],
+            !_whitelisted[_account],
             "Whitelistable: account is whitelisted"
         );
         _;
@@ -43,7 +43,7 @@ abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
      * @param _account The address to check
      */
     function isWhitelisted(address _account) external view returns (bool) {
-        return whitelisted[_account];
+        return _whitelisted[_account];
     }
 
     /**
