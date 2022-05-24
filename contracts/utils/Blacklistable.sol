@@ -4,6 +4,10 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
 
+/**
+ * @dev A utility to prevent specific group of users performing a specific action.
+ * It is useful for the case when there are violations/malicious activities made by the account
+*/
 abstract contract Blacklistable is AccessControlEnumerableUpgradeable {
     mapping(address => bool) private _blacklisted;
 

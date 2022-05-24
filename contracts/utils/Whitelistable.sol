@@ -4,6 +4,11 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol";
 
+
+/**
+ * @dev A utility to allow specific group of users perform a specific action.
+ * It is useful for the case users need to pass AML/KYC process to purchase/trade token
+*/
 abstract contract Whitelistable is AccessControlEnumerableUpgradeable {
     mapping(address => bool) private _whitelisted;
 
