@@ -4,6 +4,7 @@ pragma solidity ^0.8.0;
 
 /**
  * @dev Interface of Standard Gluwacoin that extend the existing functions of ERC-20 to support Ethless transactions.
+ * It will be used together with ERC-20 standard for implementation
  */
 interface IGluwacoinV1 {
 
